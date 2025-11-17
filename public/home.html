@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sisben Casa</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .content-section {
+        background-image: url('imagenes/hogar.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 40px;
+        border-radius: 12px;
+        }
+    </style>
+</head>
+
+<!-- NAVBAR -->
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="imagenes\logo.png" alt="Logo sisben">
+        </div>
+        <nav>
+              <ul class="nav-links">
+                <li><a href="login.html">Ingreso</a></li>
+                <li><a href="home.html">Hogar</a></li>
+                <li><a href="person.html">Persona</a></li>
+                <li><a href="programs.html">Programa</a></li>
+                <li><a href="firebase.html">Firebase</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO -->
+
+    <main class="content-section">
+        <h1 class="page-title">HOGAR</h1>
+
+        <section>
+            
+            <form id="postSqlForm-home">
+                <label for="id-home">Casa:</label><br>
+                <input type="text" id="id-home" name="id_homes" placeholder="Ingrese un número único..." required><br><br>
+
+                <label for="address">Dirección :</label><br>
+                <input type="text" id="address" name="address" placeholder="Escriba la dirección del hogar" required><br><br>
+
+                <label for="social_stratum">Estrato social :</label><br>
+                <input type="text" id="social_stratum" name="social_stratum" placeholder="Ejemplo: 1, 2, 3..." required><br><br>
+
+                <label for="municipality">Municipio :</label><br>
+                <input type="text" id="municipality" name="municipality" placeholder="Ingrese el municipio de residencia" required><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <p id="postSqlResult"></p>
+
+            <!-- ETL -->
+            <hr><br>
+            <h2>Importar desde Firebase</h2>
+
+            <button id="runETL" class="btn">Importar hogares Firebase → SQL</button>
+            <p id="etlMessage" style="margin-top:10px; font-weight:bold;"></p>
+
+        </section>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>"Sisbén: Tu puerta de acceso a los programas sociales.".</p>
+        <p> Uso: Para folletos, carteles o materiales que buscan acercar el Sisbén a la gente de forma amigable."Identificando necesidades, construyendo oportunidades.</p> 
+        <p>Uso: Una frase más inspiradora que conecte con el impacto social del Sisbén.</p>
+        <p>"Sisbén: Presente en tu comunidad."</p>
+        <p>Uso: Para comunicaciones locales o comunitarias.</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+
+    <script src="./js/home.js"></script>
+    
+</body>
+</html>

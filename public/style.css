@@ -1,0 +1,354 @@
+/* ---- Estilos globales ---- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* ---- Navbar ---- */
+.navbar {
+  background-color: #d9d9d9;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+
+.navbar .logo img {
+  height: 50px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar nav ul li {
+  margin-left: 20px;
+}
+
+.navbar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+  background-color: #363434;
+  border-radius: 5px;
+}
+
+/* ---- Sección de contenido (consolidada) ---- */
+.content-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.content-section section {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/*--- Caja ---*/
+.content-section section.form-container {
+  width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* ---- Títulos y tarjetas ---- */
+.page-title {
+  color: #363434;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  color: #363434;
+  margin-top: 0;
+}
+
+.card button {
+  background-color: #363434;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #363434;
+}
+
+/* ---- Formulario de login y formularios generales ---- */
+.login-form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-form-container h2 {
+  color: #363434;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+  background-color: #45a049;
+}
+
+/* ---- Footer ---- */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #333;
+  color: white;
+  font-size: 0.9em;
+}
+
+/* ---- Mesas dashboard ---- */
+.mesas-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mesas-header {
+  background-color: #e55c3f;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.mesas-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mesas-actions button {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mesas-actions button:hover {
+  background-color: #4cae4c;
+}
+
+.mesas-input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mesas-input-group label {
+  font-weight: bold;
+}
+
+.mesas-input-group input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ---- Data display ---- */
+.data-display {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.data-display-header {
+  background-color: #363434;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.data-table-headers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.data-column {
+  background-color: #555;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.data-rows {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.data-item {
+  background-color: #444;
+  padding: 15px;
+  border-radius: 5px;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+}
+
+/* ---- Reglas generales para formularios (consolidadas) ---- */
+form label {
+  font-weight: bold;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  background: linear-gradient(45deg, #363434, #363434);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: linear-gradient(45deg, #605160, #605160);
+}
+
+/* ---- Estilos específicos del formulario #postSqlForm-home ---- */
+#postSqlForm-home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 550px;
+  margin: auto;
+}
+
+#postSqlForm-home label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+#postSqlForm-home input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+#postSqlForm-home button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  background-color: #363434;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px auto 0;
+}
+
+#postSqlForm-home button:hover {
+  background-color: #4b4b4b;
+}

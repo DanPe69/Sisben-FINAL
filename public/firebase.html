@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Las Dos Torres - Firestore UI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .content-section {
+      background-image: url('imagenes/firestore.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    
+    #loadBenefs { margin-top: 8px; }
+  </style>
+</head>
+<body>
+  
+  <header class="navbar">
+    <div class="logo">
+      <img src="imagenes/logo.png" alt="Logo sisben">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="login.html">Ingreso</a></li>
+        <li><a href="home.html">Hogar</a></li>
+        <li><a href="person.html">Persona</a></li>
+        <li><a href="programs.html">Programa</a></li>
+        <li><a href="firebase.html">Firebase</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <main class="content-section">
+    <h1 class="page-title">FIRESTORE</h1>
+
+    <section class="card">
+      <h2>Crear Casa</h2>
+      <form id="createHouseForm">
+        <div class="form-group">
+          <label for="houseId">Casa</label>
+          <input id="houseId" name="houseId" type="text" placeholder="Ingrese un número único..." required>
+        </div>
+        <div class="form-group">
+          <label for="address">Dirección</label>
+          <input id="address" name="address" type="text" placeholder="Dirección" required>
+        </div>
+        <div class="form-group">
+          <label for="municipality">Municipio</label>
+          <input id="municipality" name="municipality" type="text" placeholder="Municipio">
+        </div>
+        <div class="form-group">
+          <label for="stratum">Estrato</label>
+          <input id="stratum" name="stratum" type="number" placeholder="Estrato social">
+        </div>
+        <button type="submit">Crear</button>
+      </form>
+      <p id="createMsg"></p>
+    </section>
+
+    <section class="card">
+      <h2>Casas</h2>
+      <button id="loadHouses">Cargar casas</button>
+      <ul id="housesList"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Beneficiarios (selecciona una casa)</h2>
+      <div class="form-group">
+        <label for="houseForBenef">ID de casa</label>
+        <input id="houseForBenef" type="text" placeholder="Ej: casa1">
+      </div>
+
+      <form id="addBenefForm">
+        <div class="form-group">
+          <label for="bName">Nombre</label>
+          <input id="bName" type="text" placeholder="Nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="bAge">Edad</label>
+          <input id="bAge" type="number" placeholder="Edad" required>
+        </div>
+        <button type="submit">Agregar beneficiario</button>
+      </form>
+
+      <button id="loadBenefs">Cargar beneficiarios</button>
+      <ul id="benefList"></ul>
+    </section>
+  </main>
+
+  
+  <footer>
+    <p>"Sisbén: Tu puerta de acceso a los programas sociales."</p>
+    <p>Uso: Para folletos, carteles o materiales que buscan acercar el Sisbén a la gente de forma amigable.</p>
+    <p>"Identificando necesidades, construyendo oportunidades."</p>
+    <p>Uso: Una frase más inspiradora que conecte con el impacto social del Sisbén.</p>
+    <p>"Sisbén: Presente en tu comunidad."</p>
+    <p>Uso: Para comunicaciones locales o comunitarias.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

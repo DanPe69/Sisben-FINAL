@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sisbén programa</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .content-section { background-image: url('imagenes/programas.png'); }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo"><img src="imagenes/logo.png" alt="Logo sisben"></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="login.html">Ingreso</a></li>
+        <li><a href="home.html">Hogar</a></li>
+        <li><a href="person.html">Persona</a></li>
+        <li><a href="programs.html">Programa</a></li>
+        <li><a href="firebase.html">Firebase</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-section">
+    <h1 class="page-title">Programa</h1>
+    <section>
+      <form id="postSqlForm-programs">
+        <label for="social_program_id">ID Programa:</label>
+        <input type="text" id="social_program_id" name="social_program_id" required>
+
+        <label for="beneficiary_id">ID Beneficiario:</label>
+        <input type="text" id="beneficiary_id" name="beneficiary_id" required>
+
+        <button type="submit">Guardar</button>
+      </form>
+      <p id="postSqlResult"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>"Sisbén: Tu puerta de acceso a los programas sociales."</p>
+  </footer>
+
+  <script src="./js/programs.js"></script>
+</body>
+</html>
